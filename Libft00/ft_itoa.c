@@ -6,7 +6,7 @@
 /*   By: nsabia <nsabia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 18:36:17 by noel              #+#    #+#             */
-/*   Updated: 2023/10/24 11:09:56 by nsabia           ###   ########.fr       */
+/*   Updated: 2023/10/24 11:12:51 by nsabia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ static char	*itoa_part3(int n, char *result)
 	return (result);
 }
 
-static char	*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*result;
 
