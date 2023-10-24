@@ -6,7 +6,7 @@
 /*   By: nsabia <nsabia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 18:36:17 by noel              #+#    #+#             */
-/*   Updated: 2023/10/22 15:11:30 by nsabia           ###   ########.fr       */
+/*   Updated: 2023/10/24 11:09:56 by nsabia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "libft.h"
 #include <stdio.h>
 
-char	*itoa_part1(int n, char *result)
+static char	*itoa_part1(int n, char *result)
 {
 	int		i;
 	int		minus;
@@ -34,7 +34,7 @@ char	*itoa_part1(int n, char *result)
 	}
 	result = (char *)malloc(i + 1 + minus);
 	if (!result)
-		return (NULL);
+		return (0);
 	if (n == 0)
 	{
 		result[0] = '0';
@@ -43,7 +43,7 @@ char	*itoa_part1(int n, char *result)
 	return (result);
 }
 
-char	*itoa_part3(int n, char *result)
+static char	*itoa_part3(int n, char *result)
 {
 	int		i;
 	int		m ;
@@ -70,7 +70,7 @@ char	*itoa_part3(int n, char *result)
 	return (result);
 }
 
-char	*ft_itoa(int n)
+static char	*ft_itoa(int n)
 {
 	char	*result;
 

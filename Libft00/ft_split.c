@@ -6,11 +6,12 @@
 /*   By: nsabia <nsabia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 17:35:21 by nsabia            #+#    #+#             */
-/*   Updated: 2023/10/23 17:09:49 by nsabia           ###   ########.fr       */
+/*   Updated: 2023/10/24 10:50:55 by nsabia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include <stdio.h>
 #include "libft.h"
 
 static int	wordcounting(const char *s, char c)
@@ -34,7 +35,7 @@ static int	wordcounting(const char *s, char c)
 	return (counter);
 }
 
-int	malloc_check(char **result, int i)
+static int	malloc_check(char **result, int i)
 {
 	i--;
 	while (i >= 0)
@@ -55,7 +56,7 @@ char	**ft_split(const char *s, char c)
 	word_counter = wordcounting(s, c);
 	result = (char **)ft_calloc(word_counter + 1, sizeof(char *));
 	if (!result)
-		return (NULL);
+		return (0);
 	i = 0;
 	while (*s && i < word_counter)
 	{

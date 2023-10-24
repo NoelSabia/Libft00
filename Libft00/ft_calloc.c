@@ -6,7 +6,7 @@
 /*   By: nsabia <nsabia@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/07 14:39:38 by noel              #+#    #+#             */
-/*   Updated: 2023/10/11 18:14:21 by nsabia           ###   ########.fr       */
+/*   Updated: 2023/10/24 10:59:02 by nsabia           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_calloc(size_t count, size_t size)
 	sizeofal = count * size;
 	ptr = (int *)malloc(sizeofal);
 	if (!ptr)
-		return (NULL);
+		return (0);
 	ft_memset(ptr, 0, sizeofal);
 	return (ptr);
 }
